@@ -6,12 +6,17 @@
 import tweepy
 from tweepy import OAuthHandler
 import pandas as pd 
-import dotenv
+import os
+from dotenv import load_dotenv
+from os.path import join, dirname
 
-consumer_key = process.env.CONSUMER_KEY
-consumer_secret = process.env.CONSUMER_SECRET
-access_token = process.env.ACCESS_TOKEN
-access_secret = process.env.ACCESS_SECRET
+dotenv_path = join(dirname(__file__), '.env')
+load_dotenv(dotenv_path)
+
+consumer_key = os.getenv('CONSUMER_KEY')
+consumer_secret = os.getenv('CONSUMER_SECRET')
+access_token = os.getenv('ACCESS_TOKEN')
+access_secret = os.getenv('ACCESS_SECRET')
 
 auth = OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_secret)
