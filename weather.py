@@ -5,12 +5,35 @@
 # - Question: Explain the differences between XML and JSON 
 
 import requests
+import dotenv 
+import os 
+from dotenv import load_dotenv
+from os.path import join, dirname
+import json
+import pandas as pd
 
-template = 'https://api.openweathermap.org/data/2.5/weather?appid=1276fab0a23e83a13f3e9eb58116f6a0&q='
-city = input("City Name:")
+dotenv_path = join(dirname(__file__), '.env')
+load_dotenv(dotenv_path)
 
-url = template + city
+app_id = os.getenv('APP_ID')
+city = raw_input('City Name: ')
+temp_unit = 'units=metric'
+template = 'https://api.openweathermap.org/data/2.5/forecast?'
+
+url = template + 'appid=' + app_id + '&q=' + city + '&' + temp_unit
 
 json_data = requests.get(url).json()
+overall = json_data['list'][0]['weather'][0]['main']
+weather_list = json_data['list']
+date = weather_list[0]['dt_txt']
 
-print(json_data)
+forecast = []
+for item in weather_list:
+  weather = {}
+  weather['date'] = item['dt_txt']
+  weather['main'] = item['weather'][0]['main']
+  weather['temp'] = item['main']['temp']
+  forecast.append(weather)
+
+for item in forecast:
+  print('Date/Time: ' + item['date'] + ', Forecast for ' + city + ': ' + item['main'] + ', ' + str(item['temp']) + 'C')
