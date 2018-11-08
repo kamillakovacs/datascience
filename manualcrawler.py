@@ -16,8 +16,6 @@ for title in soup.find_all('h1', {'class' : 'cikkcim'}):
 for item in titles:
   print item
 
-
-
 # webpage = urllib2.urlopen(url)
 # page_source = webpage.read()
 
