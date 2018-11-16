@@ -1,0 +1,23 @@
+{
+  "name": "ds",
+  "version": "1.0.0",
+  "description": "",
+  "main": "oi-phantomjs.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kamillakovacs/datascience.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kamillakovacs/datascience/issues"
+  },
+  "homepage": "https://github.com/kamillakovacs/datascience#readme",
+  "dependencies": {
+    "node-phantom": "^0.2.5",
+    "scraperjs": "^1.2.0"
+  }
+}

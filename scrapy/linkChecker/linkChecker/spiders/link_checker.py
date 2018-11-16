@@ -7,13 +7,14 @@ class IndexSpider(scrapy.Spider):
   def parse(self, response):
     self.index = 0
     print(response.url)
-    a_selectors = response.xpath('//h1[@class="cikkcim"]')
+    a_selectors = response.xpath('//h1[@class="cikkcim"]').extract()
     for selector in a_selectors:
-      text = selector.xpath("text()").extract_first()
+      # text = selector.xpath("text()")
       # link = selector.xpath("")
-      request = response.follow(text, callback=self.parse)
-      yield request
-    filename = "index_response"+str(self.index)
-    with open(filename, 'wb') as f:
-      f.write(response.body)
-    self.log('Saved file %s' % filename)
+      request = response.follow(selector, callback=self.parse)
+      print request
+    # filename = "index_response"+str(self.index)
+    # with open(filename, 'wb') as f:
+    #   f.write(response.body)
+    # self.log('Saved file %s' % filename)
+

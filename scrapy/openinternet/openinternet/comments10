@@ -1,0 +1,1224 @@
+<!DOCTYPE html><!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]--><!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]--><!--[if IE 8]><html class="no-js lt-ie9"><![endif]--><!--[if gt IE 8]><!--><html class="no-js ng-scope" ng-app="fcc.ecfs"><!--<![endif]--><head><style type="text/css">.ng-animate.item:not(.left):not(.right){-webkit-transition:0s ease-in-out left;transition:0s ease-in-out left}</style><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}</style><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title ng-bind="title" class="ng-binding"></title><meta name="description" content=""><link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700|Lato:500" rel="stylesheet" type="text/css"><script type="text/javascript" charset="utf-8" async="" data-requirecontext="audioeye" data-requiremodule="lib/modals" src="https://wsv3cdn.audioeye.com/build/lib/modals.js?cb=20181031c"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="audioeye" data-requiremodule="modules/live-scanner" src="https://wsv3cdn.audioeye.com/build/modules/live-scanner.js?cb=20181031c"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="audioeye" data-requiremodule="lib/activity-panel" src="https://wsv3cdn.audioeye.com/build/lib/activity-panel.js?cb=20181031c"></script><base href="https://www.fcc.gov/ecfs/"><link rel="stylesheet" href="lib/angular-ui-select/dist/select.min.css"><link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css"><link rel="stylesheet" href="lib/nvd3/src/nv.min.css"><link rel="stylesheet" type="text/css" href="views/help/swagger/swagger-ui.css"><link href="views/help/swagger/css/typography.css" media="screen" rel="stylesheet" type="text/css"><link href="views/help/swagger/css/reset.css" media="screen" rel="stylesheet" type="text/css"><link href="views/help/swagger/css/reset.css" media="print" rel="stylesheet" type="text/css"><link href="views/help/swagger/css/screen.css" media="screen" rel="stylesheet" type="text/css"><link href="views/help/swagger/css/print.css" media="print" rel="stylesheet" type="text/css"><link rel="stylesheet" href="styles/styles.css"><script async="" src="https://www.google-analytics.com/analytics.js"></script><script src="views/help/swagger/lib/object-assign-pollyfill.js"></script><script src="views/help/swagger/lib/jquery-1.8.0.min.js"></script><script src="views/help/swagger/lib/jquery.slideto.min.js"></script><script src="views/help/swagger/lib/jquery.wiggle.min.js"></script><script src="views/help/swagger/lib/jquery.ba-bbq.min.js"></script><script src="views/help/swagger/lib/handlebars-4.0.5.js"></script><script src="views/help/swagger/lib/lodash.min.js"></script><script src="views/help/swagger/lib/backbone-min.js"></script><script src="views/help/swagger/lib/swagger-ui.min.js"></script><script src="views/help/swagger/lib/highlight.9.1.0.pack.js"></script><script src="views/help/swagger/lib/highlight.9.1.0.pack_extended.js"></script><script src="views/help/swagger/lib/jsoneditor.min.js"></script><script src="views/help/swagger/lib/marked.js"></script><script src="views/help/swagger/lib/swagger-oauth.js"></script><link rel="alternate" type="application/rss+xml" title="RSS 2.0" ng-href="https://ecfsapi.fcc.gov/filings?date_received=%5Bgte%5D2018-01-01%5Blte%5D2018-11-15&amp;limit=100&amp;q=(proceedings.name%3A((17%5C-108*))%20OR%20proceedings.description%3A((17%5C-108*)))&amp;sort=date_disseminated%2CDESC&amp;type=rss" href="https://ecfsapi.fcc.gov/filings?date_received=%5Bgte%5D2018-01-01%5Blte%5D2018-11-15&amp;limit=100&amp;q=(proceedings.name%3A((17%5C-108*))%20OR%20proceedings.description%3A((17%5C-108*)))&amp;sort=date_disseminated%2CDESC&amp;type=rss"><link rel="icon" type="image/png" href="favicon.ico"><script async="" src="https://wsv3cdn.audioeye.com/api/?callback=livescannerCallback&amp;url=https%3A%2F%2Fwww.fcc.gov%2Fecfs%2Fsearch%2Ffilings%3Fdate_received%3D%255Bgte%255D2018-01-01%255Blte%255D2018-11-15%26limit%3D100%26q%3D(proceedings.name%3A((17%255C-108*))%2520OR%2520proceedings.description%3A((17%255C-108*)))%26sort%3Ddate_disseminated%2CDESC&amp;module=live-scanner&amp;device=desktop&amp;lang=en&amp;cb=20181031c"></script></head><body ng-browser-print="printView" print-element-id="printView" id="printView" class="waiting ae-lang-en ae-device-desktop"><!--[if lt IE 10]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]--><!--[if lt IE 9]><script src="js/html5shiv.min.js"></script>
+    <script src="js/selectivizr-min.min.js"></script><![endif]--><div class="page row-offcanvas row-offcanvas-right"><!-- uiView: header --><header ui-view="header" class="site-header ng-scope"></header><div class="page-content" role="main"><section class="page-header"><div class="container">&nbsp;</div></section><section class="section-primary"><div class="container"><div class="row row-offcanvas row-offcanvas-left"><div class="col-xs-6 sidebar-offcanvas" id="sidebar" role="navigation" style="display: none;"><div class="list-group"><a href="/ecfs/" ui-sref="ecfs.search-filings" class="list-group-item">Search Filings</a>  <a href="/ecfs/filings/express" ui-sref="ecfs.filings.express.new" class="list-group-item">Express Filing</a>  <a href="/ecfs/filing/status/search" ui-sref="ecfs.filing.status.search" class="list-group-item">Check filing Status</a>  <a href="/ecfs/help" ui-sref="ecfs.help" class="list-group-item">User Help</a></div></div><!-- uiView: content --><div ui-view="content" class="col-xs-12 ng-scope"></div></div></div></section></div><!-- uiView: footer --><footer ui-view="footer" class="page-footer ng-scope"></footer></div><script>!function(e,t,a,n,c,s,o){e.GoogleAnalyticsObject=c,e[c]=e[c]||function(){(e[c].q=e[c].q||[]).push(arguments)},e[c].l=1*new Date,s=t.createElement(a),o=t.getElementsByTagName(a)[0],s.async=1,s.src=n,o.parentNode.insertBefore(s,o)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-16888309-1","auto"),ga("send","pageview");</script><script src="lib/es5-shim/es5-shim.min.js"></script><script src="lib/angular/angular.min.js"></script><script src="lib/angular-animate/angular-animate.min.js"></script><script src="lib/angular-cookies/angular-cookies.min.js"></script><script src="lib/angular-nvd3/dist/angular-nvd3.min.js"></script><script src="lib/angular-resource/angular-resource.min.js"></script><script src="lib/angular-sanitize/angular-sanitize.min.js"></script><script src="lib/angular-ui-bootstrap-bower/ui-bootstrap-tpls.min.js"></script><script src="lib/angular-ui-bootstrap-fontawesome/dist/ui-bootstrap-fontawesome-latest.min.js"></script><script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script><script src="lib/angular-ui-select/dist/select.min.js"></script><script src="lib/angular-ui-utils/validate.min.js"></script><script src="lib/angular-utils-ui-breadcrumbs/uiBreadcrumbs.min.js"></script><script src="lib/d3/d3.min.js"></script><script src="lib/json3/lib/json3.min.js"></script><script src="lib/lodash/lodash.min.js"></script><script src="lib/moment/min/moment.min.js"></script><script src="lib/ng-file-upload/angular-file-upload.min.js"></script><script src="lib/nvd3/nv.d3.min.js"></script><script src="lib/q/q.min.js"></script><script src="js/angular-aria.min.js"></script><script src="scripts/scripts.min.js"></script><script src="scripts/dynamic/url.constant.js"></script><script type="text/javascript">function toggle_visibility(l){var e=document.getElementById(l);"block"==e.style.display?e.style.display="none":e.style.display="block"}</script><script type="text/javascript">!function(){var t=function(){var t=document.createElement("script");t.src="https://static.audioeye.com/ae.js",t.type="text/javascript",t.setAttribute("async",""),document.getElementsByTagName("body")[0].appendChild(t)};"complete"!==document.readyState?window.addEventListener?window.addEventListener("load",t):window.attachEvent&&window.attachEvent("onload",t):t()}();</script>
+<div id="ae_app">
+
+    
+    <link id="ae_aggregate_css" rel="stylesheet" href="https://wsv3cdn.audioeye.com/css/aggregate.css?files=core|compliance|launcher&amp;cb=20181031c" class="ae-style" type="text/css" media="screen" charset="utf-8">
+
+
+        <!--
+        Layout, Style or Voice Helpers
+    -->
+    <div id="ae_helpers" class="ae-module" style="display: none;">
+
+    <style class="ae-style" type="text/css">
+body.ae-reader .form-type-select .form-checkboxes.bef-select-as-checkboxes .bef-checkboxes .form-item input{
+display: block !important;
+}
+</style>            
+<script type="text/javascript">
+
+  AudioEye.layoutHelpers.push(function(ae){
+    if(!(ae.is('html'))) {
+      if(ae.findExtra('[ui-view="content"]').length > 0) {
+        //AudioEye.focusElement('[role="main"]');
+      }
+    }
+
+    //append text
+    ae.find('a[href="https://apps.fcc.gov/UrbanRateSurvey/"]').prepend('<span class="ae-compliance-indent" style="display:none;"> voice offerings </span>');
+    ae.find('div.field-item.even p strong').prepend('<span class="ae-compliance-indent" style="display:none;"> sort by </span>');
+    ae.find('a[href="https://www.fcc.gov/pshs/docs/advisory/hkip/karrp.pdf"]').append('<span class="ae-compliance-indent" style="display:none;"> for the Katrina Panel report </span>');
+    ae.find('a[href="http://hraunfoss.fcc.gov/edocs_public/attachmatch/FCC-08-99A1.pdf"]').prepend('<span class="ae-compliance-indent" style="display:none;"> for the Commercial Mobile Service Committee report </span>');
+    ae.find('a[href="http://energycommerce.house.gov/Press_110/JAC.Report_FINAL%20Jan.3.2008.pdf"]').prepend('<span class="ae-compliance-indent" style="display:none;"> for the Joint Advisory Committee report  </span>');
+    //ae.find('a[href="/"]').prepend('<span class="ae-compliance-indent" style="display:none;"> Home Page </span>');
+    ae.find('a[href="about-fcc/fcc-initiatives/incentive-auctions"]').append('<span class="ae-compliance-indent" style="display:none;"> about the Broadcast Incentive Auction </span>');
+    ae.find('a[href="http://www.donotcall.gov/"]').prepend('<span class="ae-compliance-indent" style="display:none;"> add your personal wireless phone number to the national Do-Not-Call list </span>');
+    //ae.find('a[href="/licensing-databases/fees"]').append('<span class="ae-compliance-indent" style="display:none;"> about Fees </span>');
+    //ae.find('a[href="/licensing-databases/forms"]').append('<span class="ae-compliance-indent" style="display:none;"> about Forms </span>');
+    ae.find('a[href="/licensing-databases/fees/fee-filer"]').prepend('<span class="ae-compliance-indent" style="display:none;"> pay </span>');
+    ae.find('a[href="#whatIsAProceeding"]').prepend('<span class="ae-compliance-indent" style="display:none;"> FCC </span>'); 
+    ae.find('a[href="http://esupport.fcc.gov/complaints.htm"]').prepend('<span class="ae-compliance-indent" style="display:none;"> consumer </span>'); 
+
+    //alt update
+    ae.find('img[src="https://prototype.fcc.gov/sites/default/files/styles/media_thumbnail/public/mo-leadership-thumbnail.jpg?itok=1NP8k2Q0"]').attr('alt', 'Thumbnail picture of Commissioner Michae.findl O\'Rielly');
+    ae.find('img[src="http://transition.fcc.gov/eb/images/leblanc.jpg"]').attr('alt', 'Travis LeBlanc');
+    ae.find('img[src="http://transition.fcc.gov/wcb/images/wcb_matt-delnero.jpg"]').attr('alt', 'Matthew DelNero');
+    ae.find('img[src="/sites/all/themes/fcc/images/map-small.jpg"]').attr('alt', 'map cutout of FCC building in Washington D.C.');
+    ae.find('img[src="https://transition.fcc.gov/bureaus/cgb/images/TimelineGraphic.jpg"]').attr('alt', 'graphic showing FCC policy milestones');
+
+    // Clarify show all link
+    ae.find('a[ng-click="browseDateListLimitToggle()"]:contains(Show all...)').append('<span class="ae-compliance-indent" style="display:none;"> filings</span>');
+
+    // Clarify Browse by Filings links
+    ae.find('a[ui-sref="ecfs.search.filings(dateObj.params)"]').prepend('<span class="ae-compliance-indent" style="display:none;">Browse filings by </span>');
+
+    // Apply tooltip text as aria-labels
+    ae.find('[tooltip]').each(function() {
+      ae.find(this).attr('aria-label',ae.find(this).attr('tooltip'));
+      ae.find(this).append('<span class="ae-text-reader"> '+ae.find(this).attr('tooltip')+' </span>');
+    });
+
+    // Give inputs lacking a type the type of "text" for styling purposes
+    ae.find('input:not([type])').attr('type','text');
+
+    // Give extra detail text to link
+    ae.find('.fa-file-text').after('<span class="ae-compliance-indent" style="display:none;">Filing Detail </span>');
+
+    // Make non-form look like a plain div in RDM and not be announced as a form
+    ae.find('div[ui-view="filingview"] form.form-horizontal').attr('data-ae-blurbtype','div');
+
+    // Make upload drop box act like an anchor
+    ae.find('.drop-box').attr('data-ae-blurbtype','button');
+
+    // Make .btn class elements act like buttons
+    setTimeout(function(){
+      ae.find('.btn').attr('data-ae-blurbtype','button');
+    }, 500);
+
+    // Append filing number to links for clarity
+    ae.find('table.proceedings a:contains(New Filing), table.proceedings a:contains(Express Reply)').each( function() {
+      ae.find(this).append('<span class="ae-compliance-indent" style="display:none;"> for ' + ae.find(this).closest('tr').find('a:first').text() + '</span>');
+    });
+
+    // Prepend proceeding to filing numbers for clarity
+    ae.find('.proceedings.table tr').each(function() {
+      ae.find(this).find('a:first').prepend('<span class="ae-compliance-indent" style="display:none;">Proceeding </span>');
+    });
+
+    ae.find('.pagination-page a').prepend('<span class="ae-compliance-indent" style="display:none;">Page </span>');
+    ae.find('.pagination-page a:contains(...) .ae-compliance-indent').text('Additional Pages');
+
+
+	// Apply accessible PDF changes only to ECFS pages
+    if (String(window.location.pathname).indexOf("/ecfs/") == 0) {
+
+      // Exclude anchors in a nav menu from having "accessible PDF added
+      ae.find('.nav a[href*=".pdf"]').addClass('ae-exclude-pdf');
+
+      // Create PDF links that point to us
+      ae.find('a[href*=".pdf"]:not(.ae-accessible-link):not(.ae-exclude-pdf)').each( function() {
+        if (ae.find(this).next('.ae-accessible-link').length < 1) {
+          var href = ae.find(this).attr('href');
+          if(href.substring(0,1) === '/') {
+            href = window.location.origin + href;
+          } else if(href.substring(0,4) !== 'http') {
+            href = ae.find(this).get(0).href;
+          }
+          var href = encodeURIComponent(href);
+          var url = 'http://wsv3.audioeye.com/convertpdf.php?url=' + href;
+          ae.find(this).after('<a class="ae-accessible-link" rel="nofollow" href="'+url+'" onclick="return confirm(\'Are you sure you want to proceed to an accessible version of the document?\')"><img class="ae-accessible-pdf" src="//wsv3cdn.audioeye.com/images/AudioEye_Tools_PDFAccessibility_icon.svg" alt="An accessible version of this document may exist, click here to access that version" /></a>');
+        }
+      });
+    }
+
+    ae.find('#menu-primary').removeAttr('aria-hidden');
+
+
+    // Fix Date Range Labels
+    ae.find('label[for="dateReceivedStart"] span,label[for="dateReceivedEnd"] span,label[for="datePostedStart"] span,label[for="datePostedEnd"] span,label[for="dateCommentStart"] span,label[for="dateCommentEnd"] span,label[for="dateReplyCommentStart"] span,label[for="dateReplyCommentEnd"] span,label[for="dateCreatedStart"] span,label[for="dateCreatedEnd"] span,label[for="dateClosedStart"] span,label[for="dateClosedEnd"] span').css('visibility','').addClass('ae-compliance-indent');
+
+    ae.find('label[for="dateReceivedStart"],label[for="dateReceivedEnd"]').prepend('<span class="ae-compliance-indent" style="display:none;">Date Received Range. </span> ');
+    ae.find('label[for="datePostedStart"],label[for="datePostedEnd"]').prepend('<span class="ae-compliance-indent" style="display:none;">Posted Date Range. </span> ');
+    ae.find('label[for="dateCommentStart"],label[for="dateCommentEnd"]').prepend('<span class="ae-compliance-indent" style="display:none;">Comment Date. </span> ');
+    ae.find('label[for="dateReplyCommentStart"],label[for="dateReplyCommentEnd"]').prepend('<span class="ae-compliance-indent" style="display:none;">Reply Comment Date. </span> ');
+    ae.find('label[for="dateCreatedStart"],label[for="dateCreatedEnd"]').prepend('<span class="ae-compliance-indent" style="display:none;">Date Created Range. </span> ');
+    ae.find('label[for="dateClosedStart"],label[for="dateClosedEnd"]').prepend('<span class="ae-compliance-indent" style="display:none;">Date Closed Range. </span> ');
+
+    // Remove unnecessary role from selects that causes issues with JAWS
+    ae.find('select[role]').removeAttr('role');
+
+    // Label nav menus
+    ae.find('#search-subnav .menu-secondary').attr('aria-label','Filings and Proceedings Search');
+    ae.find('#filing-subnav .menu-secondary').attr('aria-label','Submit a Filing');
+    ae.find('#status-subnav .menu-secondary').attr('aria-label','Check Filing Status');
+    ae.find('#help-subnav .menu-secondary').attr('aria-label','User Help');
+    ae.find('.footer-links.social-media-links').attr('aria-label','Footer Social Media');
+    ae.find('.footer-links.footer-links-sitemap').attr('aria-label','Footer Site Map');
+
+    //console.log('lh',ae);
+    ae.outerFind('[datepicker-popup-wrap] button').attr('tabindex','0');
+    //ae.outerFind('[datepicker-popup-wrap]').removeAttr('tabindex').attr('role','presentation').attr('aria-hidden','true');
+    //ae.find('table.filings.table').attr('data-ae-blurbtype','');
+  });
+
+</script>            
+<style class="ae-style" type="text/css">
+
+  body.ae-reader div[ui-view="filingview"] form.form-horizontal label {
+    margin-top: 10px;
+    font-weight: 700;
+  }
+
+  .ae-accessible-link {
+    margin-left: 5px;
+  }
+
+  .ae-accessible-pdf {
+    width: 16px;
+  }
+
+  body.ae-reader .panel {
+    margin: 15px 0;
+  }
+
+  body.ae-reader span.badge.ng-binding.ng-scope {
+    float: right;
+  }
+
+  body:not(.ae-reader) .ae-text-reader {
+    display: none;
+  }
+
+  body.ae-reader [tooltip], body.ae-reader .btn-group, body.ae-reader .btn-group-vertical {
+    display: block;
+  }
+
+  body.ae-reader .tooltip {
+    display: none;
+  }
+
+</style>            
+
+    </div>
+    
+
+        <!--
+        Compliance 
+    -->
+    <div id="ae_compliance" class="ae-module" style="display: none;">
+
+        
+        <script type="text/javascript">!function(r){void 0!==window.AudioEye?window.AudioEye.manualRemediations.push(r):r($ae("html"))}(function(ele){
+	/*Begin_QF DO NOT ERASE*/
+		ele.outerFind("img[src='https://transition.fcc.gov/transaction/bleft.gif']").attr("alt","");
+	ele.outerFind("img[src='http://transition.fcc.gov/transaction/bleft.gif']").attr("alt","");
+		ele.outerFind("img[src='https://www.fcc.gov/sites/default/files/2015_09_17-event-thumb.png']").attr("alt","");
+	ele.outerFind("img[src='http://www.fcc.gov/sites/default/files/2015_09_17-event-thumb.png']").attr("alt","");
+		ele.outerFind("img[src='https://www.fcc.gov/sites/default/files/2015_09_25-event-thumb.png']").attr("alt","");
+	ele.outerFind("img[src='http://www.fcc.gov/sites/default/files/2015_09_25-event-thumb.png']").attr("alt","");
+		ele.outerFind("img[src='https://transition.fcc.gov/eb/images/michael3.jpg']").attr("alt","");
+	ele.outerFind("img[src='http://transition.fcc.gov/eb/images/michael3.jpg']").attr("alt","");
+	/*End_QF*/
+});
+    !function(i){var t=i.pop();t.id="44635",t.title="Test Result 1 Quick Fix",t.type="htmlmixed",i.push(t)}(AudioEye.manualRemediations);
+</script>
+<script type="text/javascript">!function(r){void 0!==window.AudioEye?window.AudioEye.manualRemediations.push(r):r($ae("html"))}(function(ele){
+	
+    // Add title to iframe
+	ele.find("iframe[src*='/ecfs/lib/viewerjs/ViewerJS/index.html']").attr("title","PDF Viewer");
+
+});
+    !function(i){var t=i.pop();t.id="44638",t.title="Give iframe a title",t.type="htmlmixed",i.push(t)}(AudioEye.manualRemediations);
+</script>
+<script type="text/javascript">
+	!function(r){void 0!==window.AudioEye?window.AudioEye.manualRemediations.push(r):r($ae("html"))}(function(ele){
+		
+      	ele.find('h1, h2, h3, h4, h5, h6').each(function() {
+      		if ($ae.trim($ae(this).text()).length === 0 ) {
+        		if ($ae(this).children().length === 0) {
+          			$ae(this).attr({'aria-hidden':'true', 'role':'presentation'});
+        		}
+        		if ($ae(this).clone().find('b, hr, span, br, strong').remove().end().children().length === 0) {
+                  	$ae(this).attr({'aria-hidden':'true', 'role':'presentation'});
+        		}
+      		}
+    	});
+      	ele.outerFind('.footer-heading').attr({'role':'heading','aria-level':3});
+      	ele.outerFind('.sidebars h4').attr({'role':'presentation'});
+      	ele.outerFind('h4,h5,h6').attr('role','presentation');
+      	ele.outerFind('.field-item h3, .pane-content h3, .section--left-80 h3, .block__title, .node__title ').attr({'role':'heading','aria-level':2});
+      	ele.outerFind('.field-item h3, .section--left-80 h3, .block__title, .node__title ').attr({'role':'heading','aria-level':2});
+      	ele.outerFind('.pane-title:contains(Headlines)').attr({'role':'heading','aria-level':1});
+      	ele.outerFind('h1:contains(Tweets)').attr({'role':'heading','aria-level':2});
+      	ele.outerFind('.panel-title').attr({'role':'heading','aria-level':3});
+      
+      	//Fix 17-12-19
+      	ele.outerFind('h2:contains(Consumer and Governmental Affairs Headlines)').attr({'role':'heading','aria-level':2});
+	});
+  
+
+    !function(i){var t=i.pop();t.id="44639",t.title="WCAG Script Remediations - Headings",t.type="htmlmixed",i.push(t)}(AudioEye.manualRemediations);
+</script>
+<script type="text/javascript">
+	!function(r){void 0!==window.AudioEye?window.AudioEye.manualRemediations.push(r):r($ae("html"))}(function(ele){
+		
+      	ele.outerFind('.chosen-search input[type="text"]').each(function(){
+          $ae(this).attr({'aria-label':$ae(this).closest('.chosen-container').find('a.chosen-single').text()});
+          
+        });
+      	ele.outerFind('#views-exposed-form-events-panel-pane-1').attr('aria-label','Events Filter Form');
+        ele.outerFind('#views-exposed-form-headlines-landing-page').attr('aria-label','Headlines Filter Form');
+
+	});
+
+    !function(i){var t=i.pop();t.id="44623",t.title="WCAG Script Remediations - Forms",t.type="htmlmixed",i.push(t)}(AudioEye.manualRemediations);
+</script>
+<script type="text/javascript">
+	!function(r){void 0!==window.AudioEye?window.AudioEye.manualRemediations.push(r):r($ae("html"))}(function(ele){
+		ele.outerFind('.rtecenter iframe').attr('title','Tutorials');                                    
+      	ele.find('iframe').not('[title]').each(function(){
+            if(!this.hasAttribute('src')){
+              $ae(this).attr({'title':'empty frame', 'role': 'presentation', 'aria-hidden': 'true'});     
+            } else {
+              if($ae(this).attr('src') == 'about:blank'){
+                  $ae(this).attr({'title':'blank frame', 'role': 'presentation', 'aria-hidden': 'true'});   
+              }
+              if($ae(this).attr('src').indexOf('transition.fcc.gov') > -1){
+                  $ae(this).attr('title','F C C transition frame');  
+              }
+              if($ae(this).attr('src').indexOf('app.box.com/embed') > -1){
+                  $ae(this).attr('title','Video');  
+              }
+              if($ae(this).attr('id') == 'stFrame'){
+                  $ae(this).attr('title','Captioning frame');  
+              }stFrame
+            }
+        });
+      
+	});
+
+    !function(i){var t=i.pop();t.id="44640",t.title="WCAG Script Remediations - Frames",t.type="htmlmixed",i.push(t)}(AudioEye.manualRemediations);
+</script>
+<script type="text/javascript">
+	!function(r){void 0!==window.AudioEye?window.AudioEye.manualRemediations.push(r):r($ae("html"))}(function(ele){
+      
+		//missing alt
+      	ele.outerFind('img').not('[alt]').each(function(){           
+			if(!$ae(this).attr('src')) {
+          		$ae(this).attr({'alt':''});
+        	}
+      		if($ae(this).attr('src')) {
+              	if($ae(this).attr('src').indexOf('event-thumb.png') > -1) {
+          			$ae(this).attr({'alt':''});
+        		}
+            }                            
+        });
+      
+      	//hide svg with text equivalent
+      	ele.outerFind('.at-share-btn-elements a').has('.at4-visually-hidden').find('svg').each(function(){
+          	var ae_mel_svg_title = $ae(this).parent('span').prev('span').text();
+          	$ae(this).attr({'aria-hidden':'true', 'title':ae_mel_svg_title});
+        });
+      
+      	//redundant alt
+      	ele.outerFind('a img[alt]').each(function(){
+      		var ae_mel_alt = $ae(this).attr('alt').toLowerCase().trim();
+      		var ae_mel_hipertext = $ae(this).closest('a').text().toLowerCase().trim();
+            if(ae_mel_hipertext.indexOf(ae_mel_alt) > -1) {
+                $ae(this).attr({'alt':''});
+            }
+        });   
+
+        
+	});
+  
+
+    !function(i){var t=i.pop();t.id="44637",t.title="WCAG Script Remediations - Images",t.type="htmlmixed",i.push(t)}(AudioEye.manualRemediations);
+</script>
+<script type="text/javascript">
+	!function(r){void 0!==window.AudioEye?window.AudioEye.manualRemediations.push(r):r($ae("html"))}(function(ele){
+		
+      	ele.outerFind('#navigation').attr({'role':'navigation'});
+                                           
+	});
+
+    !function(i){var t=i.pop();t.id="44633",t.title="WCAG Script Remediations - Landmarks",t.type="htmlmixed",i.push(t)}(AudioEye.manualRemediations);
+</script>
+<script type="text/javascript">
+	!function(r){void 0!==window.AudioEye?window.AudioEye.manualRemediations.push(r):r($ae("html"))}(function(ele){
+		
+      	ele.outerFind('a > iframe').unwrap('a[href=""]');
+		ele.outerFind('a[href=""][sheet=""][tip=""]').attr({'tabindex':'-1', 'aria-hidden':'true'});
+      
+        //object and embed equivalent
+		ele.outerFind('object').has('embed[type="application/x-shockwave-flash"]')
+        	.append(' <span style="display:none" class="ae-compliance-indent"> Your browser does not support Flash </span> ')
+        	.find('embed[type="application/x-shockwave-flash"]')
+			.append('<noembed> Your browser does not support Flash </noembed>');
+	});
+
+    !function(i){var t=i.pop();t.id="44641",t.title="WCAG Script Remediations - HTML",t.type="htmlmixed",i.push(t)}(AudioEye.manualRemediations);
+</script>
+<script type="text/javascript">
+	!function(r){void 0!==window.AudioEye?window.AudioEye.manualRemediations.push(r):r($ae("html"))}(function(ele){
+	
+        //vague text - use nearby heading to append to Learn more and Read more
+        ele.find('a').filter(function(){
+            return this.innerHTML.toLowerCase().trim() == 'learn more' || this.innerHTML.toLowerCase().trim() == 'read more';
+    	}).each(function(){ 
+          	var ae_mel_newText = '';
+			if($ae(this).prev('h6, h5, h4, h3, h2, h1').length != 0){
+            	ae_mel_newText = $ae(this).prev('h6, h5, h4, h3, h2, h1').text();
+            } else if($ae(this).prevAll('h6, h5, h4, h3, h2, h1').length != 0){
+              	ae_mel_newText = $ae(this).prevAll('h6, h5, h4, h3, h2, h1').first().text();
+            }
+			var $parents = $ae(this).parent();
+			var parent = $parents;
+			while (ae_mel_newText == '' && parent.nodeName != 'body') {
+   				ae_mel_newText = $parents.find('h6, h5, h4, h3, h2, h1').last().text();
+				$parents= $parents.parent();
+			}
+            if(ae_mel_newText != '') {
+        		$ae(this).append(' <span class="ae-compliance-indent ae-reader-visible" style="display:none;"> about ' + ae_mel_newText + ' </span> ');
+            }
+        });
+      
+      	//Redundant link title
+      	ele.outerFind('a[title]').each(function(){
+      		var ae_mel_title = $ae(this).attr('title').toLowerCase().trim();
+      		var ae_mel_hipertext = $ae(this).text().toLowerCase().trim();
+          	if(ae_mel_hipertext == '' && $ae(this).find('img[alt]').length > 0){
+                ae_mel_hipertext = $ae(this).find('img[alt]').attr('alt').toLowerCase().trim();
+            }
+            if(ae_mel_hipertext.indexOf(ae_mel_title) > -1){
+                $ae(this).removeAttr('title');
+            }
+        });
+      
+      	//empty link
+      	ele.outerFind('a[href="#"]').contents().filter(function(){ 
+			return this.nodeType == 8 && this.nodeType != 3 && this.nodeType != 1;
+		}).parent().attr({'tabindex':'-1', 'aria-hidden':'true'});
+      
+      	//Vague link hipertext - click here
+      	ele.outerFind('a[href]').filter(function(){
+    		return this.innerHTML.toLowerCase().trim() == 'click here';
+		}).each(function(){ 	
+          	var $ae_mel_vaguelink = $ae(this);
+			var ae_mel_index = $ae_mel_vaguelink.parent().contents().index($ae(this));
+			if(ae_mel_index < $ae_mel_vaguelink.parent().contents().length) {
+				//get phrase after click here
+				var ae_mel_next = $ae_mel_vaguelink.parent().contents().eq(ae_mel_index +1).text();					
+				//var ae_mel_text = ae_mel_next.substring(0, ae_mel_next.indexOf('.'));
+				var ae_mel_text = ae_mel_next;
+				//if not too long and not too short, use the rest of the phrase
+              	if(ae_mel_text.length < 141 && ae_mel_text.length > 4 ){
+                  	$ae_mel_vaguelink.append(' <span class="ae-compliance-indent ae-reader-visible" style="display: none;"> ' + ae_mel_text + ' </span> ');
+					var ae_mel_regex = new RegExp(ae_mel_text + "(?![\\s\\S]*" + ae_mel_text + ")");
+       				$ae_mel_vaguelink.parent().html(function(_,h){
+                      	return h.replace(ae_mel_regex, '<span aria-hidden="true" role="presentation">' + ae_mel_text + '</span>');
+                    });                	
+				}              
+   			}
+        });
+      
+	});
+  
+
+    !function(i){var t=i.pop();t.id="44636",t.title="WCAG Script Remediations -  Links",t.type="htmlmixed",i.push(t)}(AudioEye.manualRemediations);
+</script>
+<script type="text/javascript">
+	!function(r){void 0!==window.AudioEye?window.AudioEye.manualRemediations.push(r):r($ae("html"))}(function(ele){
+	/*	
+      	ele.find('ul, ol').each(function(){
+            if($ae(this).children('li').length < 2 && $ae(this).find('ul, ol').length == 0 && $ae(this).not('li ul').not('li ol')){
+              $ae(this).attr('role', 'presentation'); 
+            }
+        });
+      */
+	});
+  
+
+    !function(i){var t=i.pop();t.id="44627",t.title="WCAG Script Remediations - Lists",t.type="htmlmixed",i.push(t)}(AudioEye.manualRemediations);
+</script>
+<script type="text/javascript">
+    !function(r){void 0!==window.AudioEye?window.AudioEye.manualRemediations.push(r):r($ae("html"))}(function(ele){
+        ele.outerFind('ul').each(function(){
+         if($ae(this).find(' > li').length < 2){
+              $ae(this).attr('role', 'presentation');
+         }
+       });
+       
+       
+       ele.outerFind('ol').each(function(){
+         if($ae(this).find(' > li').length < 2){
+              $ae(this).attr('role', 'presentation');
+         }
+       });
+       ele.outerFind('ul.nav').attr('role','presentation');
+      	ele.outerFind('ul:contains(FCC Deactivates DIRS in All Counties Except Horry County, SC and in NC)').attr('role','presentation');
+    });
+
+    !function(i){var t=i.pop();t.id="44616",t.title="list tags",t.type="htmlmixed",i.push(t)}(AudioEye.manualRemediations);
+</script>
+<script type="text/javascript">
+	!function(r){void 0!==window.AudioEye?window.AudioEye.manualRemediations.push(r):r($ae("html"))}(function(ele,api){
+		ele.outerFind('.teaser__image img').attr('alt','');
+      	ele.outerFind('.Chart img').attr('role','presentation');
+      	ele.outerFind('img[src*="/sites/default/files/images/page/FCCML990_public-safety-support-center-banner-960.jpg"]').attr('alt','');
+        ele.outerFind('img[src*="/sites/default/files/fcc-commissioners-01312017-web.jpg"]').attr('alt','');
+        ele.outerFind('img[src*="/sites/default/files/ace-logo_white-on-red-364x235.png"]').attr('alt','');
+        ele.outerFind('img[src*="/sites/default/files/images/accessible-millennials-roundtable-4-3-15.jpg"]').attr('alt','');
+        ele.outerFind('img[src*="/sites/default/files/nikki-haley-robert-johnson-ajit-pai.jpg"]').attr('alt','');
+        ele.outerFind('img[src*="transition.fcc.gov/owd/profile-01042016.jpg"]').attr('alt','');
+      	ele.outerFind('img[src*="/sites/default/files/OIbanner-770px.jpg"]').attr('alt','');
+        ele.outerFind('img[src*="https://www.fcc.gov/sites/default/files/styles/callout/public/network-pattern-350x194-blue-on-blue.jpg?itok=4PWEze1j"]').attr('alt','');
+
+      	//new image fixes
+      	ele.outerFind('img[src*="https://www.fcc.gov/sites/default/files/styles/media_thumbnail/public/avp-leadership-thumbnail-04192017.jpg?itok=yDa8VSD_"]').attr('alt','Ajit Pai');
+        ele.outerFind('img[src*="https://www.fcc.gov/sites/default/files/styles/media_thumbnail/public/mlc-leadership-thumbnail.jpg?itok=wapG77Xy"]').attr('alt','Mignon Clyburn');
+      	ele.outerFind('img[src*="https://www.fcc.gov/sites/default/files/styles/media_thumbnail/public/mo-leadership-thumbnail.jpg?itok=1NP8k2Q0"]').attr('alt',"Michael O'Rielly");
+        ele.outerFind('img[src*="https://www.fcc.gov/sites/default/files/styles/media_thumbnail/public/bc-leadership-thumbnail-09082017.jpg?itok=OnftIy-x"]').attr('alt','Brendan Carr');
+      	ele.outerFind('img[src*="https://www.fcc.gov/sites/default/files/styles/media_thumbnail/public/jr-leadership-thumbnail_0.jpg?itok=dBc8CzVr"]').attr('alt','Jessica Rosenworcel');
+      	
+      
+      
+	});
+
+    !function(i){var t=i.pop();t.id="44644",t.title="image",t.type="htmlmixed",i.push(t)}(AudioEye.manualRemediations);
+</script>
+<script type="text/javascript">
+	!function(r){void 0!==window.AudioEye?window.AudioEye.manualRemediations.push(r):r($ae("html"))}(function(ele,api){
+		ele.outerFind('#mediaspaceWrapper').next('table').attr('role','presentation');
+      	ele.outerFind('.WordSection9').each(function(){
+        	$ae('.WordSection9 table tr:eq(1) td').attr('role', 'columnheader');
+			$ae('table.alignlefttable tr:gt(1) td:first').attr('role', 'rowheader');
+        });
+      	ele.outerFind('.WordSection8 table:last tr:eq(1) td').attr('role', 'columnheader');
+      	ele.outerFind('.proceedings.table.table-striped.ng-scope').attr('role', 'presentation');
+        ele.outerFind('.WordSection8 table:first').attr('role', 'presentation');
+      	ele.outerFind('.WordSection6 table tr:eq(1) td').attr('role', 'columnheader');
+      	ele.outerFind('h2:contains(Consumer Guides)').parent().find('table').attr('role', 'presentation');
+      	ele.outerFind('.proceedings.table').attr('role', 'presentation');
+      	ele.outerFind('table:contains(Informal Complaints, Inquiries, and Requests for Dispute Assistance) tr:eq(1) td').attr('role', 'columnheader');
+      	ele.outerFind('table:contains(Information and documents that are essential for program operations) tr:eq(1) td').attr('role', 'columnheader');
+      	ele.outerFind('table:contains(Antenna Structure Registation) tr:eq(1) td').attr('role', 'columnheader');
+      	ele.outerFind('table:contains(Manual Applications/Filings for the Wireless Services)').attr('role', 'presentation');
+      	ele.outerFind('table:contains(Emergency Alert System EAS Activation Report) tr:eq(1) td').attr('role', 'columnheader');
+      	ele.outerFind('table:contains(Demonstration of Online Public Inspection File Interface)').attr('role', 'presentation');
+      	ele.outerFind('table:contains(Total Cost of Active Information Collections) tr:eq(1) td').attr('role', 'columnheader');
+      	ele.outerFind('table:contains(Presentations Panel 1)').attr('role', 'presentation');
+      	ele.outerFind('table:contains(Press ENTER or click ACCEPT to continue)').attr('role', 'presentation');
+      	ele.outerFind('table:contains(GS Salary Level of FCC Employee) tr:eq(1) td').attr('role', 'columnheader');
+      	ele.outerFind('table:contains(rules states that applications for earth stations seeking to access)').attr('role', 'presentation');
+		ele.outerFind('#schedule table').attr('role', 'presentation');
+      	ele.outerFind('.node-48642 table, .node-183737 table').attr('role', 'presentation');
+        ele.outerFind('table:contains(Actual Speed / Advertised Speed) tr:eq(1) td').attr('role', 'columnheader');
+        ele.outerFind('table:contains(Verizon Fiber)').attr('role','presentation');
+      	ele.outerFind('table:contains(Hourly) tr:eq(1) td').attr('role','columnheader');
+
+	});
+
+    !function(i){var t=i.pop();t.id="44625",t.title="table",t.type="htmlmixed",i.push(t)}(AudioEye.manualRemediations);
+</script>
+<script type="text/javascript">
+	!function(r){void 0!==window.AudioEye?window.AudioEye.manualRemediations.push(r):r($ae("html"))}(function(ele,api){
+		ele.outerFind('.form-search-people').attr('aria-label','FCC Staff Search Form');
+      	ele.outerFind('#block-search-form #search-block-form').attr('aria-label','Search Form');
+        ele.outerFind('#fcc-find-people-default-form').attr('aria-label','Finding People at FCC Form');
+		ele.outerFind('.node-41545 form:contains(CDBS Application ID Number)').attr('aria-label','CDBS Application ID Search');
+		ele.outerFind('.jcarousel-control-prev').append(' <span class="ae-compliance-indent ae-reader-visible" style="display:none;"> Strategic goal</span>');
+      		ele.outerFind('.jcarousel-control-next').append(' <span class="ae-compliance-indent ae-reader-visible" style="display:none;"> Strategic goal</span>');
+		/*ele.outerFind('#submit-people').append(' <span class="ae-compliance-indent ae-reader-visible" style="display:none;"> Submit </span>');
+	     */
+      	      	ele.outerFind('#submit-people').prop('value','Submit');
+		ele.outerFind('#logo .header__logo-image').attr('alt','Federal Communications Commission');
+		ele.outerFind('form#views-exposed-form-reports-panel-pane-1').attr('aria-label','Filter Checkboxes');
+
+    });
+
+    !function(i){var t=i.pop();t.id="44647",t.title="form label &amp; home page logo img",t.type="htmlmixed",i.push(t)}(AudioEye.manualRemediations);
+</script>
+<script type="text/javascript">
+	!function(r){void 0!==window.AudioEye?window.AudioEye.manualRemediations.push(r):r($ae("html"))}(function(ele,api){
+		ele.outerFind('.node-28165 ul li a:contains(PDF)').each(function(){
+          $ae(this).append(' <span class="ae-compliance-indent" style="display:none;"> about '+ $ae(this).prev('a').text()+'</span>');
+		});
+      	ele.outerFind('a[href*="/general/commissioners-press-photos"]:contains(View)').append(' <span class="ae-compliance-indent" style="display:none;"> More of Commissioners Press Photos</span>');
+        ele.outerFind('a[href*="/general/previous-fcc-commissioners"]:contains(More)').append(' <span class="ae-compliance-indent" style="display:none;"> about the Previous Commisioners</span>');
+      	ele.outerFind('.staff-description').each(function(){
+          $ae(this).find('a').append(' <span class="ae-compliance-indent" style="display:none;"> -' +$ae(this).find('h2').text()+ '</span>');
+        });
+      	ele.outerFind('.slick-track .option').attr('role','link');
+		ele.outerFind('.slick-track .option').append(' <span class="ae-compliance-indent" style="display:none;"> Headlines</span>');
+        ele.outerFind('.edoc-details').each(function(){
+          	$ae(this).find('a:contains(Related Materials)').append(' <span class="ae-compliance-indent" style="display:none;"> -' +$ae(this).find('h3').text()+ '</span>');
+        });
+      	ele.outerFind('.beautytips-module-processed h3 a').each(function(){
+          	$ae(this).append(' <span class="ae-compliance-indent ae-reader-visible" style="display:none;">, ' +$ae(this).attr('bt-xtitle')+ '</span>');
+        });
+        var showmore = $ae('.read-more.pull-right.show-more');
+        if(showmore.has('.ae-compliance-indent') && showmore.has('.ae-compliance-indent') > 0){
+        } else{
+          showmore.append('<span class="ae-compliance-indent ae-reader-visible" style="display:none;"> of Access Now </span>');
+       	}
+      	ele.outerFind('.ui-tabs-paging .ui-button').append(' <span class="ae-compliance-indent" style="display:none;"> Tab</span>');
+                                                                                                     
+                                                                                                                                                                                             
+	});
+
+    !function(i){var t=i.pop();t.id="44619",t.title="link texts",t.type="htmlmixed",i.push(t)}(AudioEye.manualRemediations);
+</script>
+<script type="text/javascript">
+	!function(r){void 0!==window.AudioEye?window.AudioEye.manualRemediations.push(r):r($ae("html"))}(function(ele,api){
+		ele.outerFind('.leaflet-control-layers-zoom input[type="radio"]').append(' <span class="ae-compliance-indent" style="display:none;"> View</span>');
+        ele.outerFind('.list-broadband-panel').each(function(){
+            var desc_id="ae_describedby_" + Math.floor(Math.random() * 10000);
+            $ae(this).find('.data-label').attr("id",desc_id);
+            $ae(this).find('input[type="radio"]').attr("aria-describedby", desc_id);
+        });	
+      	ele.outerFind('#quickset-other_options .toggall').attr({'role':'button','tabindex':1});
+    });
+
+    !function(i){var t=i.pop();t.id="44620",t.title="Radio",t.type="htmlmixed",i.push(t)}(AudioEye.manualRemediations);
+</script>
+<style class="ae-style" type="text/css">
+body.ae-reader .form-type-select .form-checkboxes.bef-select-as-checkboxes .bef-checkboxes .form-item input{
+display: inline-block !important;
+}
+body.ae-reader + .bt-wrapper {
+display:none !important;
+}
+
+body.ae-reader .pane-access-now .read-more.pull-right.show-more{
+display:none !important;
+}
+
+body.ae-reader .view-access-now.view-id-access_now .view-footer{
+display: block !important;
+}
+body.ae-reader #twitter-widget-0{
+height: 600px !important;
+}
+body.ae-reader .section--bottom .col-3 a{
+display: none !important;
+}
+body.ae-reader .slick-slide[aria-hidden=true]{
+display:none !important;
+}
+body.ae-reader .slick-track{
+transform: initial !important;
+}
+body.ae-reader #at_hover{
+display:none !important;
+}
+body.ae-reader .atm-f{
+display:none !important;
+}
+body.ae-reader #logo img{
+background-color:black!important;
+}
+body.ae-reader .teaser--small__date{
+display:inline-block;
+}
+
+</style>
+<script type="text/javascript">
+	!function(r){void 0!==window.AudioEye?window.AudioEye.manualRemediations.push(r):r($ae("html"))}(function(ele,api){
+		ele.outerFind('.card__footer .btn, .link-viewMore').attr('tabindex','0');
+      	ele.outerFind('.card__desc a').attr('tabindex','0');
+      	ele.outerFind('li [tabindex=10]').attr('tabindex','0');
+	});
+
+    !function(i){var t=i.pop();t.id="44624",t.title="tabindexes",t.type="htmlmixed",i.push(t)}(AudioEye.manualRemediations);
+</script>
+<script type="text/javascript">
+	!function(r){void 0!==window.AudioEye?window.AudioEye.manualRemediations.push(r):r($ae("html"))}(function(ele,api){
+     ele.outerFind('#find-people-form').each(function(){
+          var desc_id="ae_describedby_" + Math.floor(Math.random() * 10000);
+          $ae(this).find('legend').attr("id",desc_id);
+          $ae(this).find('#edit-find-people-name').attr("aria-labelledby", desc_id);
+      });
+      ele.outerFind('#find-people-form').each(function(){
+          var desc_id2="ae_describedby_" + Math.floor(Math.random() * 10000);
+          $ae(this).find('.description').attr("id",desc_id2);
+          $ae(this).find('#edit-find-people-name').attr("aria-describedby", desc_id2);
+      });
+      
+        
+	});
+
+    !function(i){var t=i.pop();t.id="44621",t.title="aria-describedby",t.type="htmlmixed",i.push(t)}(AudioEye.manualRemediations);
+</script>
+<script type="text/javascript">
+	!function(r){void 0!==window.AudioEye?window.AudioEye.manualRemediations.push(r):r($ae("html"))}(function(ele,api){
+		ele.outerFind('.slick-track').removeAttr('role');
+      	ele.outerFind('.slick-track .option.slick-slide').attr({'role':'link','tabindex':0});
+      	ele.outerFind('.nextArrow.slick-arrow').attr({'role':'button','aria-label':'Next'});
+        ele.outerFind('.prevArrow.slick-arrow').attr({'role':'button','aria-label':'Previous'});
+		ele.outerFind('.toggall').attr('role','button');
+	});
+
+    !function(i){var t=i.pop();t.id="44622",t.title="role",t.type="htmlmixed",i.push(t)}(AudioEye.manualRemediations);
+</script>
+<script type="text/javascript">
+	!function(r){void 0!==window.AudioEye?window.AudioEye.manualRemediations.push(r):r($ae("html"))}(function(ele,api){
+		ele.outerFind('.views-widget-filter-og_group_ref_target_id').each(function(){
+			var desc_id="ae_describedby_" + Math.floor(Math.random() * 10000);
+			$ae(this).find('label[for=edit-og-group-ref-target-id]').attr("id",desc_id);
+			$ae(this).find('input[type="checkbox"]').attr("aria-describedby", desc_id);
+		});
+     	 ele.outerFind('.views-widget-filter-field_report_series_tid').each(function(){
+			var desc_id="ae_describedby_" + Math.floor(Math.random() * 10000);
+			$ae(this).find('label[for=edit-field-report-series-tid]').attr("id",desc_id);
+			$ae(this).find('input[type="checkbox"]').attr("aria-describedby", desc_id);
+		});
+     	 ele.outerFind('.views-widget-filter-shs_term_node_tid_depth').each(function(){
+			var desc_id="ae_describedby_" + Math.floor(Math.random() * 10000);
+			$ae(this).find('label[for=edit-shs-term-node-tid-depth]').attr("id",desc_id);
+			$ae(this).find('input[type="checkbox"]').attr("aria-describedby", desc_id);
+		});
+     	 ele.outerFind('.views-widget-filter-field_event_type_tid').each(function(){
+			var desc_id="ae_describedby_" + Math.floor(Math.random() * 10000);
+			$ae(this).find('label[for=edit-field-event-type-tid]').attr("id",desc_id);
+			$ae(this).find('input[type="checkbox"]').attr("aria-describedby", desc_id);
+		});
+      ele.outerFind('.views-widget-filter-og_user_node_target_id').each(function(){
+			var desc_id="ae_describedby_" + Math.floor(Math.random() * 10000);
+			$ae(this).find('label[for=edit-og-user-node-target-id]').attr("id",desc_id);
+			$ae(this).find('input[type="checkbox"]').attr("aria-describedby", desc_id);
+		});
+     /* ele.outerFind('.').each(function(){
+			var desc_id="ae_describedby_" + Math.floor(Math.random() * 10000);
+			$ae(this).find('label[for=]').attr("id",desc_id);
+			$ae(this).find('input[type="checkbox"]').attr("aria-describedby", desc_id);
+		});
+     */ 
+      ele.outerFind('.views-widget-filter-tid').each(function(){
+			var desc_id="ae_describedby_" + Math.floor(Math.random() * 10000);
+			$ae(this).find('label[for=edit-tid-1]').attr("id",desc_id);
+			$ae(this).find('input[type="checkbox"]').attr("aria-describedby", desc_id);
+		});
+      ele.outerFind('.views-widget-filter-tid_1').each(function(){
+			var desc_id="ae_describedby_" + Math.floor(Math.random() * 10000);
+			$ae(this).find('label[for=edit-tid-2]').attr("id",desc_id);
+			$ae(this).find('input[type="checkbox"]').attr("aria-describedby", desc_id);
+		});
+      ele.outerFind('.bef-required-filter-processed').each(function(){
+			var desc_id="ae_describedby_" + Math.floor(Math.random() * 10000);
+			$ae(this).find('label[for=edit-og-group-ref-target-id]').attr("id",desc_id);
+			$ae(this).find('input[type="checkbox"]').attr("aria-describedby", desc_id);
+		});
+      	ele.outerFind('.form-group:contains(Address)').each(function(){
+			var desc_id="ae_describedby_" + Math.floor(Math.random() * 10000);
+			$ae(this).find('label[for=address1]').attr("id",desc_id);
+			$ae(this).find('input[type="checkbox"]').attr("aria-describedby", desc_id);
+		});
+      ele.outerFind('.views-widget-filter-type').each(function(){
+			var desc_id="ae_describedby_" + Math.floor(Math.random() * 10000);
+			$ae(this).find('label[for=edit-type]').attr("id",desc_id);
+			$ae(this).find('input[type="checkbox"]').attr("aria-describedby", desc_id);
+		});
+     
+	});
+
+    !function(i){var t=i.pop();t.id="44626",t.title="Checkbox aria-describedby",t.type="htmlmixed",i.push(t)}(AudioEye.manualRemediations);
+</script>
+<script type="text/javascript">
+  !function(r){void 0!==window.AudioEye?window.AudioEye.manualRemediations.push(r):r($ae("html"))}(function(ele,api){
+    ele.outerFind('#edit-tid-wrapper >label').attr('id','ae_js_wid_lab0');
+    ele.outerFind('#edit-tid-1-wrapper >label').attr('id','ae_js_wid_lab1');
+
+    // connected groups of checkbox inputs to the widget labels
+    ele.outerFind('.form-checkboxes.bef-select-as-checkboxes.bef-required-filter-processed input').each(function() {
+      $ae(this).attr('aria-describedby',$ae(this).closest('.views-widget').prev('label').attr('id'));
+    });
+
+    // added offscreen text to checkboxes
+    ele.outerFind('.form-checkboxes.bef-select-as-checkboxes.bef-required-filter-processed input').addClass("ae-compliance-indent ae-reader-visible");
+    ele.outerFind('.form-item-items-per-page #edit-items-per-page').addClass("ae-compliance-indent ae-reader-visible");
+    ele.outerFind('.menu__item.is-leaf a').attr('tabindex',0);
+  });
+  $ae('#edit-items-per-page').on('change', function() {
+  	var select_value= this.value;
+    $ae('#edit_items_per_page_chosen .chosen-single span').text(select_value);
+});
+  $ae('#edit-items-per-page').focus(function(){
+    $ae(this).next('ul.ae-listbox').remove();
+  });
+
+    !function(i){var t=i.pop();t.id="44642",t.title="checkbox tabbing",t.type="htmlmixed",i.push(t)}(AudioEye.manualRemediations);
+</script>
+<style class="ae-style" type="text/css">
+  .form-item-items-per-page #edit-items-per-page:focus {
+    display: block !important;
+    height: auto !important;
+    left: initial !important;
+    line-height: initial !important;
+    overflow: initial !important;
+    position: initial !important;
+    top: initial !important;
+    width: 100% !important;
+    padding: 12px;
+  }
+  .form-item-items-per-page #edit-items-per-page:focus + div {
+    display: none !important;
+  }
+</style>
+<script type="text/javascript">
+  !function(r){void 0!==window.AudioEye?window.AudioEye.manualRemediations.push(r):r($ae("html"))}(function(ele,api){
+   /* ele.outerFind('.fa.fa-arrow-circle-right').append(' <span class="ae-compliance-indent ae-reader-visible" style="display:none;"> Next Year</span>');
+    ele.outerFind('.fa.fa-arrow-circle-left').append(' <span class="ae-compliance-indent ae-reader-visible" style="display:none;"> Previous Year</span>');
+    ele.outerFind('.fa-arrow-circle-left').attr('role','button');
+    ele.outerFind('.fa-arrow-circle-right').attr('role','button');
+	ele.outerFind('.slick-slide[aria-hidden=true]').attr('tabindex',-1);
+    ele.outerFind('.slick-slide[aria-hidden=false]').attr('tabindex',0);
+    ele.outerFind('#edit_items_per_page_chosen input').attr({'tabindex':-1,'role':'presentation', 'aria-hidden':'true'});
+	ele.outerFind('#edit_items_per_page_chosen').attr({'role':'button','tabindex':0});
+	ele.outerFind('#edit-items-per-page').attr({'tabindex':-1,'role':'presentation', 'aria-hidden':'true'});
+    ele.outerFind('#edit_items_per_page_chosen ul li').attr('role','menu-item');
+    	ele.outerFind('#edit-items-per-page option').attr('aria-hidden','true');
+*/
+    ele.outerFind('.chosen-drop input').attr({'tabindex':-1,'role':'presentation', 'aria-hidden':'true'});
+    ele.outerFind('.chosen-container.chosen-container-single.form-select.chosen-processed.chosen-container-single-nosearch').attr({'tabindex':-1,'role':'presentation', 'aria-hidden':'true'});
+    ele.outerFind('.block__title').removeAttr('aria-level');
+  });
+
+    !function(i){var t=i.pop();t.id="44646",t.title="headlines",t.type="htmlmixed",i.push(t)}(AudioEye.manualRemediations);
+</script>
+<script type="text/javascript">
+	!function(r){void 0!==window.AudioEye?window.AudioEye.manualRemediations.push(r):r($ae("html"))}(function(ele,api){
+		ele.outerFind('.at-share-btn.at-svc-compact').click(function(){
+          AudioEye.focusElement('.at-expanded-menu-close');
+        });
+      	ele.outerFind('#skip-link a').attr('href','#browse-by');
+	});
+
+    !function(i){var t=i.pop();t.id="44632",t.title="focus to popup, focus to main nav",t.type="htmlmixed",i.push(t)}(AudioEye.manualRemediations);
+</script>
+<script type="text/javascript">
+	!function(r){void 0!==window.AudioEye?window.AudioEye.manualRemediations.push(r):r($ae("html"))}(function(ele,api){
+		ele.outerFind('.navbar-secondary.navbar-default').removeAttr('aria-hidden');
+      ele.outerFind('#quickset-other_options h3 a').attr({'role':'presentation','tabindex':-1}); 
+      api.hideFromAT('.toggall');
+	});
+
+    !function(i){var t=i.pop();t.id="44628",t.title="tabindex for Other Options AT",t.type="htmlmixed",i.push(t)}(AudioEye.manualRemediations);
+</script>
+<script type="text/javascript">
+  !function(r){void 0!==window.AudioEye?window.AudioEye.manualRemediations.push(r):r($ae("html"))}(function(ele,api){
+
+    ele.outerFind('#browse-by').attr('data-ae-site-menu-link', 'true');
+	ele.outerFind('#menu-primary').attr('data-ae-site-menu-link', 'true');
+    api.setAttr('.accessible-megamenu',{'aria-label':'Browse by Category'});
+    api.setAttr('.menu-name-menu-bureaus-and-offices .menu',{'aria-label':'Browse by BUREAUS & OFFICES'});
+	ele.outerFind('#browse-by').attr('role','tablist');
+    ele.outerFind('#browse-by li').attr('role','presentation');
+    ele.outerFind('#browse-by a').attr('role','tab');
+    
+    /*ele.outerFind('#quickset-other_options h3 a').attr({'role':'button'});
+      if (ele.outerFind('#quickset-other_options h3').hasClass('ui-state-active')) {
+        $ae('#quickset-other_options h3').attr({
+          'aria-expanded': 'true'
+        });
+      }
+      else{
+        $ae('#quickset-other_options h3').attr({
+          'aria-expanded': 'false'
+        });
+      }
+                  
+  }); */
+     api.hideFromAT('img[src*="transition.fcc.gov/bureaus/cgb/images/"]');
+     ele.outerFind('img[src*="transition.fcc.gov/bureaus/cgb/images/"]').attr('alt','');
+});
+
+    !function(i){var t=i.pop();t.id="44630",t.title="Accessible Menu &amp; AT Fixes",t.type="htmlmixed",i.push(t)}(AudioEye.manualRemediations);
+</script>
+
+                    <script type="text/javascript">
+                        (function () {
+                            var rem = function (ele, api) {
+                                ele.outerFind('h1:contains(Federal Communications Commission)').attr({'role':'heading','aria-level':2});
+ele.outerFind('.field-items h2 a img[src*="transition.fcc.gov/foia/leave-site-icon.jpg"]').addClass('ae-exclude');   
+                            };
+                            rem.id = 44629;
+                            rem.title = "heading AT Fixes";
+                            if (window.AudioEye && window.AudioEye.manualRemediations) {
+                                window.AudioEye.manualRemediations.push(rem);
+                            }
+                        }());
+                        //# sourceURL=heading_AT_Fixes.js
+                    </script>
+                    
+                    <script type="text/javascript">
+                        (function () {
+                            var rem = function (ele, api) {
+                                //fix pdf links
+ele.outerFind('div.links > a:contains(pdf), div.links > a:contains(Word)').each(function() {
+  $ae(this).prepend('<span class="ae-compliance-indent ae-reader-visible" style="display:none;"> about '+$ae(this).parent().prev('div.title').find('strong').text()+' '+ '</span>');
+});
+
+//News Release links
+ele.outerFind('a:contains(News Release)').each(function() {
+  $ae(this).append('<span class="ae-compliance-indent ae-reader-visible" style="display:none;"> about '+$ae(this).closest('ul').prev('h4').text()+'</span>');
+});   
+                            };
+                            rem.id = 44643;
+                            rem.title = "PDF Link fixes";
+                            if (window.AudioEye && window.AudioEye.manualRemediations) {
+                                window.AudioEye.manualRemediations.push(rem);
+                            }
+                        }());
+                        //# sourceURL=PDF_Link_fixes.js
+                    </script>
+                    
+                    <script type="text/javascript">
+                        (function () {
+                            var rem = function (ele, api) {
+                                //Hide titles
+ele.outerFind('h4:contains(Nationwide EAS Test Releases)+ li:nth-child(4) > p.block__title').attr('role', 'presentation');
+
+//Accordion Headings
+ele.outerFind('h4:contains(Nationwide EAS Test)').attr({'role':'heading','aria-level':2});
+ele.outerFind('h4:contains(ETRS Login)').attr({'role':'heading','aria-level':2});
+ele.outerFind('h4:contains(Nationwide EAS Test Releases)').attr({'role':'heading','aria-level':2});
+ele.outerFind('h4:contains(ETRS Frequently Asked Questions)').attr({'role':'heading','aria-level':2});
+ele.outerFind('h4:contains(Registration Information)').attr({'role':'heading','aria-level':2});
+ele.outerFind('h4:contains(Completing ETRS Form One)').attr({'role':'heading','aria-level':2});
+ele.outerFind('h4:contains(Accessing ETRS Forms Two and Three)').attr({'role':'heading','aria-level':2});
+ele.outerFind('h4:contains(Archived Releases)').attr({'role':'heading','aria-level':2});   
+                            };
+                            rem.id = 44617;
+                            rem.title = "Article heading changes";
+                            if (window.AudioEye && window.AudioEye.manualRemediations) {
+                                window.AudioEye.manualRemediations.push(rem);
+                            }
+                        }());
+                        //# sourceURL=Article_heading_changes.js
+                    </script>
+                    
+                    <script type="text/javascript">
+                        (function () {
+                            var rem = function (ele, api) {
+                                ele.outerFind('label.btn[tooltip],button[tooltip]').each(function() { 
+  AudioEye.remApi.addComplianceIndent($ae(this),'append','span',$ae(this).attr('tooltip')); 
+});   
+                            };
+                            rem.id = 44631;
+                            rem.title = "WCAG Script Remediations - Buttons";
+                            if (window.AudioEye && window.AudioEye.manualRemediations) {
+                                window.AudioEye.manualRemediations.push(rem);
+                            }
+                        }());
+                        //# sourceURL=WCAG_Script_Remediations___Buttons.js
+                    </script>
+                    
+                    <script type="text/javascript">
+                        (function () {
+                            var rem = function () {
+                                $ae("<style type=\"text\/css\" class=\"ae-style\">body.ae-reader div[ui-view=\"results\"] button.btn, body.ae-reader div[ui-view=\"results\"] label.btn {\n  display: block !important;\n}\n\n#ae_app #ae_activity_panel.ae-active {\n    right: 57px!important;\n}<\/style>").appendTo("#ae_app");
+                            };
+                            rem.id = 44634;
+                            rem.title = "Styles Helper";
+                            rem.type = "css";
+                            if (window.AudioEye && window.AudioEye.manualRemediations) {
+                                window.AudioEye.manualRemediations.push(rem);
+                            }
+                        }());
+                        //# sourceURL=Styles_Helper.js
+                    </script>
+                    
+                    <script type="text/javascript">
+                        (function () {
+                            var rem = function (ele, api) {
+                                //remove extra unneeded context
+ele.outerFind('button.ui-tabs-next .ui-button-text+').remove();
+ele.outerFind('button.ui-tabs-prev .ui-button-text+').remove();
+
+//add context
+ele.outerFind('button.ui-tabs-next .ui-button-text').append('<span class="ae-compliance-indent" style="display:none;"> year tab </span>');
+ele.outerFind('button.ui-tabs-prev .ui-button-text').append('<span class="ae-compliance-indent" style="display:none;"> year tab </span>');
+
+//add context to close button
+ele.outerFind('h3.proceeding span a').append('<span class="ae-compliance-indent" style="display:none;"> close fillings filter </span>');
+
+//Context to tab arrows
+ele.outerFind('span.slick-arrow').attr('tabindex','0');
+ele.outerFind('span.prevArrow.slick-arrow').attr('aria-label','Previous Year tab');
+ele.outerFind('span.nextArrow.slick-arrow').attr('aria-label','Next Year tab');
+
+//aria-discribedby stuff
+ele.outerFind('input#confirmationNumber').attr('aria-labelledby','.help-block');
+
+//date range fixes
+ele.outerFind('input#dateReceivedStart').attr('aria-label','Received Date Range Start');
+ele.outerFind('input#dateReceivedEnd').attr('aria-label','Received Date Range End');
+ele.outerFind('input#datePostedStart').attr('aria-label','Posted Date Range Start');
+ele.outerFind('input#datePostedEnd').attr('aria-label','Posted Date Range End');
+ele.outerFind('span.input-group-btn button.btn-calendar').attr('tabindex','-1');
+
+//new and older button context
+ele.outerFind('li.previous a[title="Newer"]').append('<span class="ae-compliance-indent" style="display:none;"> Newer FCC Actions </span>');
+ele.outerFind('li.next a[title="Older"]').append('<span class="ae-compliance-indent" style="display:none;"> Older FCC Actions </span>');
+
+//Other Options tabset
+api.convertToAccordion('h3#ui-accordion-quickset-other_options-header-0','ui-state-active');
+api.convertToAccordion('h3#ui-accordion-quickset-other_options-header-1','ui-state-active');
+api.convertToAccordion('h3#ui-accordion-quickset-other_options-header-2','ui-state-active');
+
+//Process Tabset
+api.convertToAccordion('div.jquery-ui-filter-accordion-header','ui-accordion-header-active');
+
+//Accordion fixes
+api.convertToAccordion('a.accordion-toggle','','div.panel-collapse');
+
+//focus
+$ae('input[type="submit"]').click(function() {
+  
+  	setTimeout(function() {
+          AudioEye.focusElement('div.form-group div.alert');
+        },300);
+});
+
+//form context
+ele.outerFind('input#id.proceeding').find('input').attr('aria-label','Proceedings * Required - Type to search proceedings. Press ENTER key after each selection');
+ele.outerFind('div[title="Filer Name"]').find('input').attr('aria-label','Name of Filers *Required - Add Filer(s). Press ENTER key after each entry');
+ele.outerFind('div[title="Lawfirm Name"]').find('input').attr('aria-label','Law Firm - Add Lawfirm(s). Press ENTER key after each entry');
+ele.outerFind('div[title="Author Name"]').find('input').attr('aria-label','Attorney/Author Names - Add Author(s). Press ENTER key after each entry');
+ele.outerFind('input#email').attr('aria-label','Primary Contact Email example@email.com');
+ele.outerFind('select#filing_entity').attr('aria-label', 'Address of *required');
+ele.outerFind('input#address1').attr('aria-label', 'Address and International address *required');
+ele.outerFind('input#city').attr('aria-label', 'City *required');
+ele.outerFind('input#userstate').attr('aria-label', 'State *Required');
+ele.outerFind('input#zip').attr('aria-label', 'Zip code *Required');
+
+//add context to steps
+ele.outerFind('div#status-buttons a.ng-scope').each(function(){
+	if($ae(this).hasClass('active')){
+      $ae(this).append('<span class="ae-compliance-indent" style="display:none;"> Current Step </span>');
+    }
+	if($ae(this).hasClass('disabled')){
+      $ae(this).append('<span class="ae-compliance-indent" style="display:none;"> Next Step needs to be Completed </span>');
+    }
+	$ae(this).prepend('<span class="ae-compliance-indent" style="display:none;"> Step </span>');
+});
+
+//add context checkbox
+ele.outerFind('input[type="checkbox"]#active').attr('aria-label', 'Activity on filings in the last 30 days');
+api.hideFromAT('input[type="checkbox"]#active+');
+ele.outerFind('input[type="checkbox"]#interAddCheck').attr('aria-label', 'Checkbox for international address');
+
+
+
+
+//tool fixes as well
+ele.outerFind('form#searchFilingStatus-form').attr('aria-label', 'Search Filing Status form');
+ele.outerFind('div[ui-view="newfiling"]').find('form#signupform').attr('aria-label', 'Standard Filing Form');
+ele.outerFind('div[ui-view="expressfiling"]').find('form#signupform').attr('aria-label', 'Express Filing Form');
+ele.outerFind('div[ui-view="nondocket"]').find('form#signupform').attr('aria-label', 'Non-Docketed Filing Form');
+
+
+// Specify Proceedings Aria label for select box 
+ele.outerFind('input[placeholder*="Type to search Proceedings by"]').attr('aria-label','Specify Proceeding (Optional)');
+
+// Contact us and rule making process accordions
+ele.outerFind('#quickset-other_options h3').each(function(){
+
+  var label = $ae(this).find('a:first').text();
+  $ae(this).attr('aria-label',label);
+  $ae(this).find('a').attr({'role':'presentation','tabindex':-1,'aria-hidden':'true'});
+});
+ele.outerFind('#jquery-ui-filter--4 div.jquery-ui-filter-accordion-header').each(function(){
+
+  var label = $ae(this).find('a:first').text();
+  $ae(this).attr('aria-label',label);
+  $ae(this).find('a').attr({'role':'presentation','tabindex':-1,'aria-hidden':'true'});
+});
+ele.outerFind('h3.ui-accordion-header').attr('tabindex',0);   
+                            };
+                            rem.id = 44618;
+                            rem.title = "AT Fixes 3-14-18";
+                            if (window.AudioEye && window.AudioEye.manualRemediations) {
+                                window.AudioEye.manualRemediations.push(rem);
+                            }
+                        }());
+                        //# sourceURL=AT_Fixes_3_14_18.js
+                    </script>
+                    
+                    <script type="text/javascript">
+                        (function () {
+                            var rem = function (ele, api) {
+                                ele.outerFind('#city').attr('aria-label','Filer\'s / Author\'s City');
+ele.outerFind('#state').attr('aria-label','Filer\'s / Author\'s State');
+ele.outerFind('#zip').attr('aria-label','Filer\'s / Author\'s Zipcode');
+ele.outerFind('a.btn-primary.btn-danger').attr('tabindex',0);
+ele.outerFind('input[type="submit"]').click(function() {
+  	setTimeout(function() {
+          AudioEye.focusElement('.alert-error');
+        },300);
+});
+
+ele.outerFind('p:contains(This article provides information)').next('ul').find('a').click(function(e){
+  e.preventDefault();
+  var label = $ae(this).attr('href').replace('#','');
+  setTimeout(function() {
+          AudioEye.focusElement($ae('a[name*='+label+']').closest('p'));
+        },300);
+});
+
+ele.outerFind('.view-headlines .edoc-details').each(function(){
+  $ae(this).find('h3.block__title:first a').append(' <span class="ae-compliance-indent" style="display:none;"> on '+ $ae(this).find('.released-date:first').text()+'</span>');
+});
+
+ele.outerFind('.view-display-id-featured_homepage').each(function(){
+  $ae(this).find('a:first').append(' <span class="ae-compliance-indent" style="display:none;"> on '+ $ae(this).find('.date-display-single').text()+'</span>');
+});
+
+api.addComplianceIndentHidden('label[for="state"]','prepend','span','Filer\'s / Author\'s ');
+api.addComplianceIndentHidden('label[for="zip"]','prepend','span','Filer\'s / Author\'s ');   
+                            };
+                            rem.id = 44648;
+                            rem.title = "AT Bugs- Customer Evaluation";
+                            if (window.AudioEye && window.AudioEye.manualRemediations) {
+                                window.AudioEye.manualRemediations.push(rem);
+                            }
+                        }());
+                        //# sourceURL=AT_Bugs__Customer_Evaluation.js
+                    </script>
+                    
+    </div>
+        
+    
+    <!-- 
+        Container for the live-scanner data. I don't want this in the placeholder UI because that can get re-appended to the screen.
+    -->
+    <div id="ae_data_live-scanner" class="ae-module" style="display: none;">
+        <script type="text/javascript">
+            
+            AudioEye.observations = [{"id":"1398","test_code":"videoCaption","element_reference":null,"prev_result_code":null,"result_code":"videoCaptionNotFound","classification":"Risk","failure_fixed":false,"verified":true,"fix_at_source":false}];
+            AudioEye.live_scanner_data = {"version":"production","working_version_id":"12713","working_version_number":"12","production_version_id":"12667","production_version_number":"11","fixes":"all_many"};
+        </script>
+    </div>
+    
+    <!-- 
+        live-scanner placeholder UI
+    -->
+    <span id="ae_placeholder_live-scanner" style="display: none;" aria-hidden="true"></span>
+
+
+     
+
+    <!-- 
+        Versioning Control Panel if versioning = true
+    -->
+    
+    
+
+    <!-- 
+        Core Font
+    -->
+    <link rel="stylesheet" class="ae-style" href="https://fonts.googleapis.com/css?family=Lato:400,700,900" type="text/css">
+
+    <!-- 
+        Activity Panel Container Markup
+    -->
+    <span id="ae_placeholder_activity_panel" style="display: none;" aria-hidden="true"></span>
+
+    
+    <!--
+        Launcher 
+    -->
+    <span id="ae_placeholder_launcher" style="display: none;" aria-hidden="true"></span>
+
+
+    <!-- 
+        Toolbar
+    -->
+    <span id="ae_placeholder_toolbar" style="display: none;" aria-hidden="true"></span>
+
+    <!-- 
+        Site Menu 
+    -->
+    <span id="ae_placeholder_site-menu" style="display: none;" aria-hidden="true"></span>
+
+    <!-- 
+        Rotor 
+    -->
+    <span id="ae_placeholder_rotor" style="display: none;" aria-hidden="true"></span>
+
+    <!-- 
+        Help 
+    -->
+    <span id="ae_placeholder_help" style="display: none;" aria-hidden="true"></span>
+
+    <!-- 
+        Settings 
+    -->
+    <span id="ae_placeholder_user-settings" style="display: none;" aria-hidden="true"></span>
+
+    <!--
+        Certification
+    -->
+    <span id="ae_placeholder_certification" style="display: none;" aria-hidden="true"></span>
+
+    <!--
+        Helpdesk
+    -->
+    <span id="ae_placeholder_helpdesk" style="display: none;" aria-hidden="true"></span>
+
+        <!-- Module Conrol Bar Container -->
+    <div id="ae_module_controlbar" style="display: none;">
+    
+        <!--
+            Player 
+        -->
+        <span id="ae_placeholder_player" style="display: none;" aria-hidden="true"></span>
+    
+        <!--
+            Voice 
+        -->
+        <span id="ae_placeholder_voice" style="display: none;" aria-hidden="true"></span>
+        
+        <!--
+            Reader
+        -->
+        <span id="ae_placeholder_reader" style="display: none;" aria-hidden="true"></span>
+
+        <!-- Mobile only - cycle through control bars -->
+        <div id="ae_bar_cycle" style="display:none;">
+        <svg style="position: absolute; width: 0; height: 0;" role="presentation" aria-hidden="true" tabindex="-1" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <defs>
+                    <symbol id="icon_transfer" viewBox="0 0 1022 1024">
+                        <title>transfer</title>
+                        <path class="path1" d="M1023.936 768h-768.192v128l-255.744-192 255.744-192v128h768.192zM0 384h767.936v128l256-192-256-192v128h-767.936z"></path>
+                    </symbol>
+                </defs>
+            </svg>
+            <svg class="ae-icon-transfer" role="img" aria-label="Cycle Ally Tools"> <use xlink:href="#icon_transfer"></use> </svg>
+        </div>
+
+    </div><!-- end module controlbar container -->
+        
+        
+    <!--
+        Generic Aria Live message container 
+    -->
+    <div class="ae-blurb-noaudio" id="ae_enabled_messages" aria-relevant="additions" aria-live="assertive"></div>
+    
+    <!-- 
+        First Time Toolbar Slide Show
+    -->
+    <span id="ae_walkthrough_placeholder_toolbar" style="display: none;" aria-hidden="true"></span>
+    
+    <!-- 
+        First Time Reader Slide Show
+    -->
+    <span id="ae_walkthrough_placeholder_reader" style="display: none;" aria-hidden="true"></span>
+    
+    
+    <!-- 
+        First Time Player Slide Show
+    -->
+    <span id="ae_walkthrough_placeholder_player" style="display: none;" aria-hidden="true"></span>
+       
+    
+    <!-- 
+        First Time Voice Slide Show
+    -->
+    <span id="ae_walkthrough_placeholder_voice" style="display: none;" aria-hidden="true"></span>
+    
+    
+    <!-- Symbol definitions -->
+    <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+            <symbol id="icon-close-carousel" viewBox="0 0 32 32">
+                <title>close carousel</title>
+                <path fill="#ffffff" style="fill: var(--color1, #ffffff)" d="M28.992 0l-12.992 12.992-12.992-12.992-3.008 3.008 12.992 12.992-12.992 12.992 3.008 3.008 12.992-12.992 12.992 12.992 3.008-3.008-12.992-12.992 12.992-12.992-3.008-3.008z"></path>
+            </symbol>
+        </defs>
+    </svg>
+
+</div><!-- end #ae_app -->
+</body></html>
