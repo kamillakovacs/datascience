@@ -1,0 +1,24 @@
+version: '3.7'
+
+services: 
+  mariadb:
+    container_name: mariadb
+    image: mariadb
+    restart: always
+    environment:
+      'MYSQL_ROOT_PASSWORD': 'HowNice'
+      'MYSQL_DATABASE': 'openinternet'
+    volumes:
+      - ./oi.sql:/docker-entrypoint-initdb.d/oi.sql
+    ports:  
+      - 33061:3306
+
+  oi-frontend:
+    container_name: oi
+    depends_on:
+      - mariadb
+    image: kamilla525/kovacsnorakamilla:oi
+    restart: always
+    ports:
+      - 3000:3000
+  

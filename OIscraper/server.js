@@ -1,4 +1,4 @@
-// "use strict"; 
+"use strict"; 
 
 const express = require('express');
 const app = express();
@@ -25,7 +25,7 @@ const conn = mysql.createConnection({
   user: 'root',
   password: 'HowNice',
   database: 'openinternet',
-  port: '3306'
+  port: '33061'
 });
 
 conn.connect((err) => {
@@ -54,39 +54,7 @@ app.get('/filings', (req, res) => {
   })
 })
 
-// app.post('/filings', (req, res) => {
-//   const table = browser.findElement(by.tagName("table"));
-//   const filings = table.findElement(by.tagName("td"));
-//   console.log('post has started')
-//   filings.forEach(filing => {
-//     let name = filing.find_element_by_class_name("col-md-8").text;
-//     let shortComment = filing.find_element_by_class_name("col-md-12");
-//     let filingBody = filing.find_element_by_tag_name("a");
-//     let filingLink = filingBody.get_attribute("href");
-
-//     conn.query(`INSERT INTO filings (name, comment, url) values ${name}, ${shortComment}, ${filingLink}`, (err, result) => {
-//       if (err) {
-//         console.log(`Database error SPECIFIC POST`);
-//         res.status(500).send(err.message);
-//         return;
-//       } 
-//       res.status(200).json({
-//         result,
-//     })
-//   });
-//   browser.quit();
-//   })
-// })
-
 app.listen(PORT, () => {
   console.log(`App is up and running on port ${PORT}`);
 });
-
-// next steps
-// pull data via server.js and selenium from website
-// send data via json to and endpoint
-// in script.js, send from endpoint to HTML
-
-// create database openinternet; 
-// create table if not exists filings (name varchar(30), comment varchar(100), url varchar(150), id int not null auto_increment primary key);
 
